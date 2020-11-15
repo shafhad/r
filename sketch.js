@@ -196,5 +196,5 @@ function butcherRC() {
 }
 
 function hideButton() {
-  button.remove();
+  button.hide();
 }
