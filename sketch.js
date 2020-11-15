@@ -24,7 +24,7 @@ var timeleft = 10;
 var gameOver;
 var gameState = "START";
 var button;
-
+p5 =new p5;
 function convertSeconds(s) {
   var min = floor(s/60);
   var sec = s % 60;
@@ -61,6 +61,9 @@ butcherST = createSprite(125, height/2, 50, 50);
   },timer);
   edges = createEdgeSprites();
 }
+button = createButton("Start Game");
+//button.position(width/2-27.5,height/2);
+button.position(400.5,600);
 
 function timeit(){
 counter++;
@@ -71,8 +74,7 @@ function draw() {
   background(bg);
 
 if(gameState === "START"){
-button = createButton("Start Game");
-button.position(width/2-27.5,height/2);
+
 butcherST.visible = false;
 button.mousePressed(function () {
   counter = 0;
@@ -196,5 +198,5 @@ function butcherRC() {
 }
 
 function hideButton() {
-  button.hide();
+  button.remove();
 }
